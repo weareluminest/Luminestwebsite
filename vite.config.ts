@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", // ← ADICIONAR ISTO
+  base: "/",
 
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -18,16 +18,32 @@ export default defineConfig({
       'next-themes@0.4.6': 'next-themes',
       'lucide-react@0.487.0': 'lucide-react',
       'input-otp@1.4.2': 'input-otp',
-      'figma:asset/f9769dcaae3468c127c2c2c83d7733502f2456f7.png': path.resolve(__dirname, './src/assets/f9769dcaae3468c127c2c2c83d7733502f2456f7.png'),
-      'figma:asset/aeb38f28f0bfd2f61b9a904a661f2f95eefb985c.png': path.resolve(__dirname, './src/assets/aeb38f28f0bfd2f61b9a904a661f2f95eefb985c.png'),
-      'figma:asset/69f8da7c8cf70a7b8d71b07aa063ef83385f9c65.png': path.resolve(__dirname, './src/assets/69f8da7c8cf70a7b8d71b07aa063ef83385f9c65.png'),
-      'figma:asset/66bb16ec1574f6497c88612367d1cf862beb0016.png': path.resolve(__dirname, './src/assets/66bb16ec1574f6497c88612367d1cf862beb0016.png'),
-      'figma:asset/299a53da947412331ff73b98fd141237477dd7f9.png': path.resolve(__dirname, './src/assets/299a53da947412331ff73b98fd141237477dd7f9.png'),
-      'figma:asset/28274f84fcdb56e86e184e4cad2e9616e6dba7dd.png': path.resolve(__dirname, './src/assets/28274f84fcdb56e86e184e4cad2e9616e6dba7dd.png'),
-      'figma:asset/141377915923cff3fb578398832f492a94c3363d.png': path.resolve(__dirname, './src/assets/141377915923cff3fb578398832f492a94c3363d.png'),
+
+      'figma:asset/f9769dcaae3468c127c2c2c83d7733502f2456f7.png':
+        path.resolve(__dirname, './src/assets/f9769dcaae3468c127c2c2c83d7733502f2456f7.png'),
+
+      'figma:asset/aeb38f28f0bfd2f61b9a904a661f2f95eefb985c.png':
+        path.resolve(__dirname, './src/assets/aeb38f28f0bfd2f61b9a904a661f2f95eefb985c.png'),
+
+      'figma:asset/69f8da7c8cf70a7b8d71b07aa063ef83385f9c65.png':
+        path.resolve(__dirname, './src/assets/69f8da7c8cf70a7b8d71b07aa063ef83385f9c65.png'),
+
+      'figma:asset/66bb16ec1574f6497c88612367d1cf862beb0016.png':
+        path.resolve(__dirname, './src/assets/66bb16ec1574f6497c88612367d1cf862beb0016.png'),
+
+      'figma:asset/299a53da947412331ff73b98fd141237477dd7f9.png':
+        path.resolve(__dirname, './src/assets/299a53da947412331ff73b98fd141237477dd7f9.png'),
+
+      'figma:asset/28274f84fcdb56e86e184e4cad2e9616e6dba7dd.png':
+        path.resolve(__dirname, './src/assets/28274f84fcdb56e86e184e4cad2e9616e6dba7dd.png'),
+
+      'figma:asset/141377915923cff3fb578398832f492a94c3363d.png':
+        path.resolve(__dirname, './src/assets/141377915923cff3fb578398832f492a94c3363d.png'),
+
       'embla-carousel-react@8.6.0': 'embla-carousel-react',
       'cmdk@1.1.1': 'cmdk',
       'class-variance-authority@0.7.1': 'class-variance-authority',
+
       '@radix-ui/react-tooltip@1.1.8': '@radix-ui/react-tooltip',
       '@radix-ui/react-toggle@1.1.2': '@radix-ui/react-toggle',
       '@radix-ui/react-toggle-group@1.1.2': '@radix-ui/react-toggle-group',
@@ -58,13 +74,13 @@ export default defineConfig({
     },
   },
 
-build: {
-  target: 'esnext',
-  outDir: 'dist',
-},
+  build: {
+    target: 'esnext',
+    outDir: 'dist'
+  },
 
   server: {
     port: 3000,
-    open: true,
-  },
+    open: true
+  }
 });
